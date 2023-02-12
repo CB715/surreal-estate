@@ -12,8 +12,8 @@ const App = () => {
       <header className="App-header">
         <NavBar />
         <Routes>
-          <Route path="/" element={Properties} />
-          <Route path="/add-property" element={AddProperty} />
+          <Route path="/" element={<Properties />} />
+          <Route path="/add-property" element={<AddProperty />} />
         </Routes>
       </header>
     </div>
