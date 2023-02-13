@@ -1,10 +1,12 @@
 import React from "react";
 
+import "../styles/add-property.css";
+
 const AddProperty = () => {
   return (
-    <>
-      <div className="properties">Add Property Page</div>;
-    </>
+    <div className="add-property">
+      <div>Add Property Page</div>
+    </div>
   );
 };
 
