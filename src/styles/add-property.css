@@ -1,4 +1,19 @@
 .add-property {
-    padding: 10px;
-    margin: 10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
+  
+.add-property-title,
+.add-property-city,
+.add-property-type,
+.add-property-bedrooms,
+.add-property-bathrooms,
+.add-property-price,
+.add-property-email {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  padding: 5px;
+}
+  
