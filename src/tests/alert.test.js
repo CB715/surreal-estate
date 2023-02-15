@@ -10,4 +10,10 @@ describe("alert", () => {
 
     expect(errorMessage.textContent).toBe("Error!");
   });
+  it("displays the alert success message", () => {
+    const alert = render(<Alert message="Success!" success />);
+    const errorMessage = alert.getByText("Success!");
+
+    expect(errorMessage.textContent).toBe("Success!");
+  });
 });
