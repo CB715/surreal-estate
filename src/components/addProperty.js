@@ -26,10 +26,11 @@ const AddProperty = () => {
     <div className="add-property">
       <div>
         <form onSubmit={handleAddProperty}>
-          <div className="add-property-title">
-            <label htmlFor="title">
-              Title
+          <div>
+            <label htmlFor="title" className="container">
+              <span className="label-text">Title</span>
               <input
+                className="input-field"
                 id="title"
                 name="title"
                 value={fields.title}
