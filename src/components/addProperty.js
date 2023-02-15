@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 
+import postProperty from "../requests/postProperty";
 import "../styles/add-property.css";
 
 const AddProperty = () => {
@@ -18,6 +19,7 @@ const AddProperty = () => {
   const [fields, setFields] = useState(initialState.fields);
   const handleAddProperty = (event) => {
     event.preventDefault();
+    postProperty(fields);
   };
   const handleFieldChange = (event) => {
     setFields({ ...fields, [event.target.name]: event.target.value });
