@@ -14,16 +14,24 @@ const AddProperty = () => {
       price: "",
       email: "",
     },
+    alert: {
+      message: "",
+      inSuccess: false,
+    },
   };
 
   const [fields, setFields] = useState(initialState.fields);
+  const [alert, setAlert] = useState(initialState.alert);
+
   const handleAddProperty = (event) => {
-    event.preventDefault();
     postProperty(fields);
+    event.preventDefault();
+    setAlert({ message: "", inSuccess: false });
   };
   const handleFieldChange = (event) => {
     setFields({ ...fields, [event.target.name]: event.target.value });
   };
+
   return (
     <div className="add-property">
       <div>
