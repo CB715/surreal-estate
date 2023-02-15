@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 import postProperty from "../requests/postProperty";
+import Alert from "./alert";
 import "../styles/add-property.css";
 
 const AddProperty = () => {
@@ -36,6 +37,7 @@ const AddProperty = () => {
     <div className="add-property">
       <div>
         <form onSubmit={handleAddProperty}>
+          <Alert message={alert.message} success={alert.isSuccess} />
           <div>
             <label htmlFor="title" className="container">
               <span className="label-text">Title</span>
