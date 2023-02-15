@@ -5,6 +5,9 @@ import Alert from "../components/alert";
 
 describe("alert", () => {
   it("displays the alert error message", () => {
-    render(<Alert />);
+    const alert = render(<Alert message="Error!" />);
+    const errorMessage = alert.getByText("Error!");
+
+    expect(errorMessage.textContent).toBe("Error!");
   });
 });
