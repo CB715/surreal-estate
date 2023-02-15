@@ -37,7 +37,6 @@ const AddProperty = () => {
     <div className="add-property">
       <div>
         <form onSubmit={handleAddProperty}>
-          <Alert message={alert.message} success={alert.isSuccess} />
           <div>
             <label htmlFor="title" className="container">
               <span className="label-text">Title</span>
@@ -132,6 +131,7 @@ const AddProperty = () => {
           <div className="add-property-button">
             <button type="submit">Add</button>
           </div>
+          <Alert message={alert.message} success={alert.isSuccess} />
         </form>
       </div>
     </div>
