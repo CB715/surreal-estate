@@ -16,4 +16,10 @@ describe("alert", () => {
 
     expect(errorMessage.textContent).toBe("Success!");
   });
+  it("does not render a message if props is empty", () => {
+    const { asFragment } = render(<Alert message="" />);
+    const alert = asFragment();
+
+    expect(alert).toMatchSnapshot();
+  });
 });
