@@ -3,8 +3,26 @@
 exports[`Property Card renders the property card 1`] = `
 <DocumentFragment>
   <div>
+    <h2>
+      A test property
+    </h2>
     <p>
-      Property Card
+      Type: Flat
+    </p>
+    <p>
+      Bathrooms: 1
+    </p>
+    <p>
+      Bedrooms: 1
+    </p>
+    <p>
+      Price: £1500
+    </p>
+    <p>
+      City: Leeds
+    </p>
+    <p>
+      Contact: test@test.com
     </p>
   </div>
 </DocumentFragment>
