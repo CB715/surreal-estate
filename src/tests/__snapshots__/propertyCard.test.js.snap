@@ -2,28 +2,45 @@
 
 exports[`Property Card renders the property card 1`] = `
 <DocumentFragment>
-  <div>
-    <h2>
+  <div
+    class="property-card"
+  >
+    <h2
+      class="property-card__title"
+    >
       A test property
     </h2>
-    <p>
+    <p
+      class="property-card__type"
+    >
       Type: Flat
     </p>
-    <p>
+    <p
+      class="property-card__bathrooms"
+    >
       Bathrooms: 1
     </p>
-    <p>
+    <p
+      class="property-card__bedrooms"
+    >
       Bedrooms: 1
     </p>
-    <p>
+    <p
+      class="property-card__price"
+    >
       Price: £1500
     </p>
-    <p>
+    <p
+      class="property-card__city"
+    >
       City: Leeds
     </p>
-    <p>
-      Contact: test@test.com
-    </p>
+    <a
+      class="property-card__email"
+      href="mailto:test@test.com"
+    >
+      Contact
+    </a>
   </div>
 </DocumentFragment>
 `;

@@ -39,6 +39,6 @@ describe("Property Card", () => {
     expect(getByText(`Bedrooms: ${validProps.bedrooms}`)).toBeInTheDocument();
     expect(getByText(`Price: ${validProps.price}`)).toBeInTheDocument();
     expect(getByText(`City: ${validProps.city}`)).toBeInTheDocument();
-    expect(getByText(`Contact: ${validProps.email}`)).toBeInTheDocument();
+    expect(getByText("Contact")).toBeInTheDocument();
   });
 });

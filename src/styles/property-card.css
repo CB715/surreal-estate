@@ -1,0 +1,27 @@
+.property-card {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 16px;
+  max-width: 400px;
+  margin: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.property-card__title {
+  margin-top: 0;
+  font-size: 24px;
+}
+  
+.property-card__type, 
+.property-card__bathrooms, 
+.property-type__bedrooms, 
+.property-card__price, 
+.property-card__city, 
+.property-card__email {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+}

@@ -6,14 +6,16 @@ import "../styles/property-card.css";
 const PropertyCard = (props) => {
   const { title, type, bedrooms, bathrooms, price, city, email } = props;
   return (
-    <div>
-      <h2>{title}</h2>
-      <p>Type: {type}</p>
-      <p>Bathrooms: {bathrooms}</p>
-      <p>Bedrooms: {bedrooms}</p>
-      <p>Price: {price}</p>
-      <p>City: {city}</p>
-      <p>Contact: {email}</p>
+    <div className="property-card">
+      <h2 className="property-card__title">{title}</h2>
+      <p className="property-card__type">Type: {type}</p>
+      <p className="property-card__bathrooms">Bathrooms: {bathrooms}</p>
+      <p className="property-card__bedrooms">Bedrooms: {bedrooms}</p>
+      <p className="property-card__price">Price: {price}</p>
+      <p className="property-card__city">City: {city}</p>
+      <a className="property-card__email" href={`mailto:${email}`}>
+        Contact
+      </a>
     </div>
   );
 };
