@@ -29,4 +29,16 @@ describe("Property Card", () => {
 
     expect(asFragment()).toMatchSnapshot();
   });
+
+  it("renders the correct props", () => {
+    const { getByText } = render(<PropertyCard {...validProps} />);
+
+    expect(getByText(validProps.title)).toBeInTheDocument();
+    expect(getByText(`Type: ${validProps.type}`)).toBeInTheDocument();
+    expect(getByText(`Bathrooms: ${validProps.bathrooms}`)).toBeInTheDocument();
+    expect(getByText(`Bedrooms: ${validProps.bedrooms}`)).toBeInTheDocument();
+    expect(getByText(`Price: ${validProps.price}`)).toBeInTheDocument();
+    expect(getByText(`City: ${validProps.city}`)).toBeInTheDocument();
+    expect(getByText(`Contact: ${validProps.email}`)).toBeInTheDocument();
+  });
 });
