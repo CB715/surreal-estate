@@ -9,3 +9,5 @@ const PropertyCard = () => {
     </div>
   );
 };
+
+export default PropertyCard;

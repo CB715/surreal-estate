@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Property Card renders the property card 1`] = `
+<DocumentFragment>
+  <div>
+    <p>
+      Property Card
+    </p>
+  </div>
+</DocumentFragment>
+`;
