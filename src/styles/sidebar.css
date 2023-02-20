@@ -1,0 +1,31 @@
+.sidebar {
+    background-color: rgb(113, 127, 141);
+    width: 200px;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    margin-top: 50px;
+  }
+
+  .sidebar-links {
+    list-style-type: none;
+  }
+
+  .sidebar-links-item a {
+    text-decoration: none;
+    color: black;
+  }
+    
+  .sidebar-links-item a:visited {
+    text-decoration: none;
+    color: black;
+  }
+    
+  .sidebar-links-item a:hover {
+    text-decoration: underline;
+  }
+    
+  .sidebar-links-item a:active {
+    text-decoration: underline;
+  }
