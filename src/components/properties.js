@@ -3,6 +3,7 @@ import axios from "axios";
 
 import PropertyCard from "./propertyCard";
 import Alert from "./alert";
+import "../styles/properties.css";
 
 const Properties = () => {
   const initialState = {
@@ -36,11 +37,14 @@ const Properties = () => {
 
   return (
     <div className="properties-container">
-      <div className="properties">Properties Page</div>
+      <div className="properties">
+        {properties.map((property) => (
+          <div key={property._id} className="item">
+            <PropertyCard {...property} />
+          </div>
+        ))}
+      </div>
       <Alert message={alert.message} success={alert.isSuccess} />
-      {properties.map((property) => (
-        <PropertyCard key={property._id} {...property} />
-      ))}
     </div>
   );
 };
