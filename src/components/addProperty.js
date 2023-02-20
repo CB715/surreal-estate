@@ -25,7 +25,7 @@ const AddProperty = () => {
   const [alert, setAlert] = useState(initialState.alert);
 
   const handleAddProperty = (event) => {
-    postProperty(fields);
+    postProperty(fields, setAlert);
     event.preventDefault();
     setAlert({ message: "", isSuccess: false });
   };
