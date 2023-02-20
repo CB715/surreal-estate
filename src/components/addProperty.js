@@ -17,7 +17,7 @@ const AddProperty = () => {
     },
     alert: {
       message: "",
-      inSuccess: false,
+      isSuccess: false,
     },
   };
 
@@ -27,7 +27,7 @@ const AddProperty = () => {
   const handleAddProperty = (event) => {
     postProperty(fields);
     event.preventDefault();
-    setAlert({ message: "", inSuccess: false });
+    setAlert({ message: "", isSuccess: false });
   };
   const handleFieldChange = (event) => {
     setFields({ ...fields, [event.target.name]: event.target.value });
