@@ -1,11 +1,15 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
+import PropertyCard from "./propertyCard";
+import Alert from "./alert";
+
 const Properties = () => {
   const initialState = {
     properties: [],
     alert: {
       message: "",
+      isSuccess: false,
     },
   };
   const [properties, setProperties] = useState(initialState.properties);
@@ -15,7 +19,7 @@ const Properties = () => {
     async function getProperties() {
       try {
         const response = await axios.get(
-          "http://localhost:4000/api-docs/PropertyListing"
+          "http://localhost:4000/api/v1/PropertyListing"
         );
         setProperties(response.data);
         setAlert({
@@ -27,11 +31,16 @@ const Properties = () => {
         });
       }
     }
+    getProperties();
   }, []);
 
   return (
-    <div>
+    <div className="properties-container">
       <div className="properties">Properties Page</div>
+      <Alert message={alert.message} success={alert.isSuccess} />
+      {properties.map((property) => (
+        <PropertyCard key={property._id} {...property} />
+      ))}
     </div>
   );
 };
