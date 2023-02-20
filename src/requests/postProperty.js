@@ -3,15 +3,13 @@ import axios from "axios";
 const postProperty = (data, setAlert) => {
   axios
     .post("http://localhost:4000/api/v1/PropertyListing", data)
-    .then((response) => {
-      console.log(response.data);
+    .then(() => {
       setAlert({
         message: "Property Added!",
         isSuccess: true,
       });
     })
-    .catch((error) => {
-      console.log(error.response.data);
+    .catch(() => {
       setAlert({
         message: "Server Error, please try again later.",
         isSuccess: false,
