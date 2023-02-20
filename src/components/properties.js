@@ -4,6 +4,7 @@ import axios from "axios";
 import PropertyCard from "./propertyCard";
 import Alert from "./alert";
 import "../styles/properties.css";
+import Sidebar from "./sidebar";
 
 const Properties = () => {
   const initialState = {
@@ -37,6 +38,7 @@ const Properties = () => {
 
   return (
     <div className="properties-container">
+      <Sidebar />
       <div className="properties">
         {properties.map((property) => (
           <div key={property._id} className="item">
